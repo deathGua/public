@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>传感器技术介绍 — PCT-100</title>
+  <meta name="description" content="工业控制中常用传感器技术：DS18B20 数字温度传感器、光敏传感器、压力传感器、液位传感器的工作原理与应用场景。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========== 导航栏 ========== -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-icon">&#9883;</span>
+      <span>PCT-100</span>
+    </a>
+    <button class="menu-toggle" aria-label="菜单">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">产品说明书</a></li>
+      <li><a href="safety.html">化工安全知识</a></li>
+      <li><a href="sensor.html">传感器技术</a></li>
+      <li><a href="about.html">关于项目</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ========== Hero ========== -->
+<header class="hero">
+  <div class="hero-content">
+    <span class="hero-badge">传感技术</span>
+    <h1>传感器技术介绍</h1>
+    <p class="subtitle">
+      传感器是工业自动化的"五官"，将物理量转换为电信号，
+      为控制系统提供决策依据。了解传感器原理是掌握工业控制的基础。
+    </p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== 传感器概述 ===== -->
+  <section class="container">
+    <h2 class="section-title">工业传感器分类</h2>
+    <p class="section-subtitle">按被测量类型，工业传感器可分为以下几大类</p>
+
+    <div class="card-grid">
+      <div class="card feature-card">
+        <div class="icon">🌡</div>
+        <h3>温度传感器</h3>
+        <p>热电偶、热电阻(RTD)、热敏电阻、数字温度芯片等，
+           用于反应釜温度、管道温度、环境温度监测。</p>
+      </div>
+      <div class="card feature-card">
+        <div class="icon">📏</div>
+        <h3>压力传感器</h3>
+        <p>应变片式、压阻式、电容式压力传感器，
+           广泛应用于反应釜压力、管道压力的实时监控。</p>
+      </div>
+      <div class="card feature-card">
+        <div class="icon">💧</div>
+        <h3>液位传感器</h3>
+        <p>超声波、电容式、浮球式、雷达液位计，
+           用于储罐液位监测和高低液位报警。</p>
+      </div>
+      <div class="card feature-card">
+        <div class="icon">🌊</div>
+        <h3>流量传感器</h3>
+        <p>电磁流量计、涡街流量计、质量流量计，
+           精确测量管道中液体或气体的流速与累计流量。</p>
+      </div>
+      <div class="card feature-card">
+        <div class="icon">☀</div>
+        <h3>光电传感器</h3>
+        <p>光敏电阻、光电二极管、光电池、红外传感器，
+           用于光照检测、物体检测、颜色识别等场景。</p>
+      </div>
+      <div class="card feature-card">
+        <div class="icon">🧪</div>
+        <h3>气体 / 化学传感器</h3>
+        <p>电化学传感器、催化燃烧传感器、红外气体分析仪，
+           用于有毒有害气体泄漏检测与环境监测。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DS18B20 详解 ===== -->
+  <section class="container">
+    <h2 class="section-title">DS18B20 数字温度传感器</h2>
+    <p class="section-subtitle">PCT-100 装置中使用的核心温度传感器</p>
+
+    <div class="sensor-showcase">
+      <div class="sensor-detail">
+        <div class="sensor-item">
+          <div class="sensor-icon">📐</div>
+          <div>
+            <h4 style="color:var(--primary);">工作原理</h4>
+            <p style="color:var(--text-light); font-size:0.95rem;">
+              DS18B20 采用半导体温度敏感元件，利用温度变化引起的 PN 结电压变化进行测量。
+              芯片内置 12-bit ADC，将模拟量转换为数字量，通过 1-Wire 单总线协议传输。
+            </p>
+          </div>
+        </div>
+        <div class="sensor-item">
+          <div class="sensor-icon">⚡</div>
+          <div>
+            <h4 style="color:var(--primary);">关键参数</h4>
+            <p style="color:var(--text-light); font-size:0.95rem;">
+              量程：-55°C ~ +125°C &nbsp;|&nbsp; 精度：±0.5°C (-10°C~+85°C)
+              &nbsp;|&nbsp; 分辨率：9~12 位可编程 &nbsp;|&nbsp; 转换时间：≤750ms (12-bit)
+              &nbsp;|&nbsp; 供电：3.0V ~ 5.5V
+            </p>
+          </div>
+        </div>
+        <div class="sensor-item">
+          <div class="sensor-icon">🔌</div>
+          <div>
+            <h4 style="color:var(--primary);">1-Wire 单总线</h4>
+            <p style="color:var(--text-light); font-size:0.95rem;">
+              仅需一根数据线（加地线）即可与主控通信，支持总线上挂载多个器件。
+              每个 DS18B20 有全球唯一的 64 位 ROM 地址码，可实现多点温度采集。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 接线图 SVG -->
+      <div class="diagram">
+        <svg viewBox="0 0 320 340" xmlns="http://www.w3.org/2000/svg" style="max-width:320px;">
+          <defs>
+            <linearGradient id="dsGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1a3a5c"/><stop offset="100%" stop-color="#2c5f8a"/>
+            </linearGradient>
+          </defs>
+          <!-- 面包板 -->
+          <rect x="60" y="30" width="200" height="120" rx="6" fill="#f4f6f9" stroke="#b0bec5" stroke-width="1.5"/>
+          <text x="160" y="85" text-anchor="middle" fill="#636e72" font-size="13" font-weight="600">DS18B20</text>
+          <text x="160" y="105" text-anchor="middle" fill="#b0bec5" font-size="11">TO-92 封装</text>
+
+          <!-- 引脚: VDD -->
+          <line x1="100" y1="150" x2="100" y2="200" stroke="#e74c3c" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+          <text x="70" y="230" fill="#e74c3c" font-size="12" font-weight="600">VDD → 3.3V</text>
+
+          <!-- 引脚: DQ -->
+          <line x1="160" y1="150" x2="160" y2="200" stroke="#f0a030" stroke-width="2.5" marker-end="url(#arrowYel)"/>
+          <text x="130" y="265" fill="#f0a030" font-size="12" font-weight="600">DQ → GPIO 10</text>
+
+          <!-- 引脚: GND -->
+          <line x1="220" y1="150" x2="220" y2="200" stroke="#2d3436" stroke-width="2.5" marker-end="url(#arrowBlk)"/>
+          <text x="210" y="300" fill="#2d3436" font-size="12" font-weight="600">GND → GND</text>
+
+          <!-- 上拉电阻示意 -->
+          <rect x="75" y="190" width="50" height="16" rx="3" fill="#e8ecf1" stroke="#b0bec5" stroke-width="1"/>
+          <text x="100" y="202" text-anchor="middle" fill="#636e72" font-size="9">4.7kΩ</text>
+
+          <text x="160" y="330" text-anchor="middle" fill="#636e72" font-size="11">图：DS18B20 典型接线图</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 光敏传感器 ===== -->
+  <section class="container">
+    <h2 class="section-title">光敏传感器原理与应用</h2>
+    <p class="section-subtitle">PCT-100 中使用的模拟量光照传感器</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3 style="color:var(--primary); margin-bottom:12px;">🔬 工作原理</h3>
+        <p style="color:var(--text-light);">
+          光敏电阻（LDR）基于半导体光电导效应：光照强度增大 → 载流子浓度增加 →
+          电阻值下降。通过串联分压电路将电阻变化转换为电压变化，
+          再由 ESP32 的 ADC 模块采集（0~4095）。
+        </p>
+        <div style="margin-top:16px; background:#f4f6f9; border-radius:8px; padding:16px; text-align:center;">
+          <span style="font-family:var(--font-mono); font-size:0.9rem; color:var(--primary);">
+            ADC = 4095 × R<sub>fixed</sub> / (R<sub>LDR</sub> + R<sub>fixed</sub>)
+          </span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--primary); margin-bottom:12px;">📊 应用场景</h3>
+        <ul style="color:var(--text-light); padding-left:20px; line-height:2.2;">
+          <li><strong>化工车间照明控制</strong>：根据环境亮度自动调节灯光</li>
+          <li><strong>安全光幕</strong>：检测人员闯入危险区域</li>
+          <li><strong>火焰探测</strong>：紫外/红外火焰传感器</li>
+          <li><strong>浊度检测</strong>：通过透光率测量液体浊度</li>
+          <li><strong>颜色识别</strong>：产品分拣与质量控制</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 传感器对比表 ===== -->
+  <section class="container">
+    <h2 class="section-title">常用工业传感器技术对比</h2>
+    <p class="section-subtitle">选型是工业控制系统设计的关键环节</p>
+
+    <div style="overflow-x: auto;">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>传感器类型</th>
+            <th>典型型号</th>
+            <th>输出信号</th>
+            <th>精度等级</th>
+            <th>适用场景</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>数字温度</strong></td>
+            <td>DS18B20</td>
+            <td>数字 (1-Wire)</td>
+            <td>±0.5°C</td>
+            <td>通用温度采集</td>
+          </tr>
+          <tr>
+            <td><strong>热电偶</strong></td>
+            <td>K 型 / J 型</td>
+            <td>模拟 (mV)</td>
+            <td>±1.5°C</td>
+            <td>高温炉、反应釜</td>
+          </tr>
+          <tr>
+            <td><strong>热电阻</strong></td>
+            <td>Pt100</td>
+            <td>模拟 (Ω 变化)</td>
+            <td>±0.15°C</td>
+            <td>精密温控</td>
+          </tr>
+          <tr>
+            <td><strong>压力变送器</strong></td>
+            <td>扩散硅式</td>
+            <td>4-20mA / 0-5V</td>
+            <td>0.1%~0.5%FS</td>
+            <td>管道压力监控</td>
+          </tr>
+          <tr>
+            <td><strong>光电传感器</strong></td>
+            <td>光敏电阻 / 光电二极管</td>
+            <td>模拟 / 开关量</td>
+            <td>取决于电路设计</td>
+            <td>光照检测、计数</td>
+          </tr>
+          <tr>
+            <td><strong>超声波液位</strong></td>
+            <td>HC-SR04 等</td>
+            <td>脉冲 / 模拟</td>
+            <td>±1cm</td>
+            <td>储罐液位</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>PCT-100 化工控制实训装置 &copy; 2026 &nbsp;|&nbsp;
+     传感技术参考《工业自动化仪表与传感器》&nbsp;|&nbsp;
+     <a href="about.html">关于本项目</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
